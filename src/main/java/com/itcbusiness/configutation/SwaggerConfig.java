@@ -8,6 +8,7 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
+import io.swagger.v3.oas.models.servers.Server;
 
 @Configuration
 public class SwaggerConfig {
@@ -16,8 +17,8 @@ public class SwaggerConfig {
 	public OpenAPI openApi() {
 		return new OpenAPI().addSecurityItem(new SecurityRequirement().addList("Bearer Authentication"))
 				.components(new Components().addSecuritySchemes("Bearer Authentication", createAPTScheme()))
-				.info(new Info().title("Master Schema Api's").description("this is for global"));
-		// .addServersItem(new Server().url("https://mathsmamasurajsir.com/b-ecom"));
+				.info(new Info().title("Master Schema Api's").description("this is for global"))
+				.addServersItem(new Server().url("https://2025itcproject-newtesting2.up.railway.app/"));
 
 	}
 
@@ -26,3 +27,4 @@ public class SwaggerConfig {
 	}
 
 }
+
