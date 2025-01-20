@@ -18,7 +18,7 @@ public class SwaggerConfig {
 		return new OpenAPI().addSecurityItem(new SecurityRequirement().addList("Bearer Authentication"))
 				.components(new Components().addSecuritySchemes("Bearer Authentication", createAPTScheme()))
 				.info(new Info().title("Master Schema Api's").description("this is for global"))
-				.addServersItem(new Server().url("https://2025itcproject-newtesting2.up.railway.app/"));
+				.addServersItem(new Server().url("https://2025itcproject-newtesting2.up.railway.app"));
 
 	}
 
